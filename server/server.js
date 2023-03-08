@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 
-app.get("/", (req, res) => {
-    res.send("Hello")
+app.get("/api", (req, res) => {
+    res.json({"users": ["Uday Patel", "Riya Patel"]})
 })
 
-app.listen(3000)
+app.listen(5000, () => (console.log("Server started on port 5000")))
+
+
 
